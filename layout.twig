@@ -12,14 +12,15 @@
 		{% include "header.twig" %}
 		
 		
-		<div class="page-wrap">
+		<div class="container page-wrap">
 			
 			{% block content %}
 			{% endblock %}
 
+			{% include "footer.twig" %}
+			
 		</div>
 
-		{% include "footer.twig" %}
 		
 		<script type="text/javascript">
 			!function() {
