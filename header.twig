@@ -1,0 +1,18 @@
+<header class="template-header">	
+	<div class="header-main container">
+		<div class="row">
+			<div class="header-title span-6">
+				{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+				{{widget('companyname', 'companyname', {"business": "LOREM IPSUM"})|raw}}
+			</div>
+			<nav class="template-nav span-6">
+				{{widget('extendednavigation', 'navigationheader', {"align":"right"})|raw}}
+			</nav>
+		</div>
+	</div>
+	<div class="header-feature">
+		<div class="container">
+			{{widget('feature', 'featurewidget', {"header": "profile", "strapline":"profile", "buttonText":"MAECENAS","defaultBgImg": asset('images/feature-bg.jpg'), 'showBtn': true})|raw}}
+		</div>
+	</div>
+</header>
