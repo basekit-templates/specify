@@ -1029,10 +1029,11 @@ input[type="search"]::-webkit-search-decoration {
 		padding-top: 10px;
 	}
 	.widget .extendednavigation a.pull {
-		right: 10px;
-		top: -32px;
+		right: 0;
+		top: 0;
 		&:after {
 			right: 7px;
+			top: 8px;
 			background-color: @color-swatch2;
 			box-shadow: 0 6px 0 @color-swatch2, 0 12px 0 @color-swatch2;
 		}
@@ -1040,6 +1041,17 @@ input[type="search"]::-webkit-search-decoration {
 	.header-details, .header-phone {
 		text-align: center;
 		
+	}
+	.header-title {
+		width: 90%;
+		float: left;
+	}
+	.template-nav {
+		width: 40px;
+		float: right;
+	}
+	.header-main .companyname {
+		padding-top: 0;
 	}
 	.widget.companyname {
 		padding-right: 60px;
