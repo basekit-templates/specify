@@ -264,7 +264,8 @@ button.btn,
 .blog-search-form button,
 .widget.ecombasket .ecombasket-list-container .ecombasket-checkout-wrap .ecombasket-checkout-link,
 .widget.ecomcheckout table tr td .checkout-quantitybtn button,
-.widget.ecomcheckout .checkout-order-button {
+.widget.ecomcheckout .checkout-order-button,
+.basket-summary-empty-cta {
 	border: 0;
 	cursor: pointer;
 	background-color: @font-swatch7-background-color;
@@ -284,7 +285,13 @@ button.btn,
 	border-radius: 2px;
 	&:hover {
 		background-color: @font-swatch7-background-color-hover;
+		text-decoration: none;
 	}
+}
+
+.basket-summary-empty-cta,
+.ecombasket-summary-link {
+	display: inline-block;
 }
 
 .template-footer .widget.profile .bk-profile-socialicons span a,
@@ -394,7 +401,6 @@ textarea {
 	resize: vertical;
 }
 
-
 .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select,
 .widget.ecomcheckout .delivery select,
 select {
@@ -440,9 +446,6 @@ input[type="search"]::-webkit-search-decoration {
 
 .header-main {
 	padding: 30px 0;
-	.companyname {
-		padding-top: 7px;
-	}
 }
 
 .header-feature {
@@ -450,7 +453,8 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 .widget.logo {
-	float: left;
+	display: inline-block;
+	vertical-align: -webkit-baseline-middle;
 	img {
 		margin-top: 3px;
 		margin-right: 11px;
@@ -512,7 +516,8 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 .widget.companyname {
-	float: left;
+	display: inline-block;
+	vertical-align: text-top;
 }
 
 //  Navigation
@@ -522,6 +527,7 @@ input[type="search"]::-webkit-search-decoration {
 }
 
 .widget .extendednavigation {
+	.clearfix;
 	ul li .text, ul li.folder .text {
 		padding: 0;
 		display: inline;
@@ -529,7 +535,7 @@ input[type="search"]::-webkit-search-decoration {
 	ul li:hover ul {
 		top: 54px;
 		left: 0;
-		background-color: @color-swatch7;
+		background-color: darken(@color-swatch7, 10%);
 		li {
 			padding: 8px 20px;
 		}
@@ -543,7 +549,7 @@ input[type="search"]::-webkit-search-decoration {
 		a, &.folder > .text {
 			display: inline;
 			padding: 0;
-			border-bottom: 3px solid @color-swatch7;
+			border-bottom: 3px solid transparent;
 			transition: .2s;
 		}
 		&.folder {
@@ -800,6 +806,10 @@ input[type="search"]::-webkit-search-decoration {
 	width: 31.990000000000002%;
 }
 
+.widget.ecomproductslist .productlist-filter {
+	margin-left: 0;
+}
+
 .ecom-productslist-products {
 	margin-left: -1.33%;
 	clear: both;
@@ -899,8 +909,12 @@ input[type="search"]::-webkit-search-decoration {
 	width: 260px;
 }
 
-.ecom-product-preview-image-wrap {
+.widget.ecomproduct .ecom-product .ecom-product-preview-image-wrap {
 	border: 1px solid @borders-blocks;
+	max-height: 400px;
+	img {
+		max-height: 100%;
+	}
 }
 
 .widget.ecomcheckout table tr th, .widget.ecomcheckout table tr td {
