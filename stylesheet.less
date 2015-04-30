@@ -1,3 +1,6 @@
+//
+// Copyright 2014 BaseKit Platform Ltd
+//
 /*	===============================
 	Table of Contents
 	===============================
@@ -378,6 +381,10 @@ input[type=search],
 	vertical-align: middle;
 }
 
+.signupform fieldset input[type=email] {
+	margin-bottom: 10px;
+}
+
 .signupform fieldset {
 	label {
 		text-indent: -300px;
@@ -387,9 +394,6 @@ input[type=search],
 	input[type=email] {
 		margin-right: 1%;
 		width: 73%;
-	}
-	button.btn {
-		width: 25%;
 	}
 }
 
@@ -464,6 +468,12 @@ input[type="search"]::-webkit-search-decoration {
 .widget.feature {
 	clear: both;
 	margin-bottom: -20px;
+	.feature-bgimg {
+		display: table;
+		&:after {
+			display: none;
+		}
+	}
 	h2, h3 {
 		span {
 			padding: 0;
@@ -1112,10 +1122,15 @@ input[type="search"]::-webkit-search-decoration {
 		&:after {
 			right: 7px;
 			top: 8px;
-			background-color: @color-swatch2;
-			box-shadow: 0 6px 0 @color-swatch2, 0 12px 0 @color-swatch2;
+			background-color: @color-swatch1;
+			box-shadow: 0 6px 0 @color-swatch1, 0 12px 0 @color-swatch1;
 		}
 	}
+	.widget.extendednavigation .bk-overlay {
+  		width: 40px;
+  		left: inherit !important;
+  		top: -26px!important;
+  	}
 	.header-details, .header-phone {
 		text-align: center;
 		
