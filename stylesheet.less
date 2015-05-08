@@ -997,10 +997,12 @@ input[type="search"]::-webkit-search-decoration {
 .widget.ecomproductslist .ecom-productslist-product {
 	padding: 0;
 }
+
 .ecom-productslist-product {
 	overflow: hidden;
 	position: relative;
 }
+
 .ecom-productlist-info {
 	min-height: 120px;
 	padding-top: 20px;
@@ -1044,6 +1046,32 @@ input[type="search"]::-webkit-search-decoration {
 .checkout-legal-links {
 	list-style: none;
 	padding: 20px 0;
+}
+
+.ecom-product-long-description {
+	margin: 20px 0 0;
+}
+
+.productlist-pagination {
+	position: absolute;
+  	bottom: 0;
+ 	margin: 20px;
+}
+
+.ecom-product-tag-link:after {
+   content: ",";
+}
+
+.ecom-product-tag-link:last-of-type:after {
+    display: none;
+}
+
+.blog-post-tag:after {
+	content: ",";
+}
+
+.blog-post-tag:last-of-type:after {
+    display: none;
 }
 
 // Basket Summary
