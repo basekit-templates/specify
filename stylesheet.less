@@ -390,7 +390,15 @@ input[type=search],
 	input[type=email] {
 		margin-right: 1%;
 		width: 73%;
+		@media @mobile {
+			width: 43%;
+			margin-bottom: 10px;
+		}
 	}
+}
+
+.signupform fieldset button {
+	margin-bottom: 10px;
 }
 
 textarea {
