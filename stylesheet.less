@@ -1193,6 +1193,20 @@ input[type="search"]::-webkit-search-decoration {
 	background-image: image('/images/icon-phone.svg');
 }
 
+
+// Sticky footer fix
+.page-wrap {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	> * {
+		flex-shrink: 0;
+	}
+}
+.section.main {
+	flex: 1 0 auto;
+}
+
 // Tablet
 @media @tablet {
 	.header-logo {
