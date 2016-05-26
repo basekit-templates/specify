@@ -1197,11 +1197,15 @@ input[type="search"]::-webkit-search-decoration {
 .page-wrap {
 	display: flex;
 	flex-direction: column;
-	height: 100vh;
-	> * {
-		flex-shrink: 0;
-	}
 }
+
+.flex-wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	flex: 1;
+}
+
 .section.main {
 	flex: 1 0 auto;
 }
