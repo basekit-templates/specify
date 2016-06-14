@@ -1,6 +1,7 @@
 {
 	"name":"Specify",
 	"thumbnail":"specify.png",
+        "screenshot":"specify-screenshot.jpg",
 	"templateType":"standard",
 	"pageTypes":["home"],
 	"tags": {
