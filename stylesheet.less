@@ -457,6 +457,9 @@ input[type="search"]::-webkit-search-decoration {
 .header-main {
 	padding: 30px 0 30px 20px;
 	max-width: 1210px;
+	@media @tablet {
+		padding: 20px 20px 20px 20px;
+	}
 	.wrapper {
 		// Flex parent
 	    display: -webkit-box;
@@ -618,6 +621,12 @@ input[type="search"]::-webkit-search-decoration {
 				top: 46%;
 			}
 		}
+	}
+}
+
+.widget .extendednavigation .open {
+	@media @tablet {
+		padding-top: 20px;
 	}
 }
 
