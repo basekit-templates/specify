@@ -8,7 +8,8 @@
 		{% include basekit.headScript %}
 	</head>
 
-	<body class="{{ page.backgroundClass }} {{ site.colorSwatch }}">
+	<body  {{ isV10sSite ? 'id="migrated-site"' : '' }}
+ class="{{ page.backgroundClass }} {{ site.colorSwatch }}">
 
 		{% block content %}
 		{% endblock %}

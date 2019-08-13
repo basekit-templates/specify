@@ -1,3 +1,97 @@
-html, body {
+// -----------------------------
+// Migration Styles
+// -----------------------------
 
+
+#migrated-site {
+
+
+// Stylseheet overrides
+// -----------------------------
+
+
+.container.page-wrap .row {
+  margin: 0;
 }
+
+.main {
+  padding: 0;
+}
+
+.widget.ecomproductslist,
+.widget.ecomproductslist .ecom-productslist-product,
+.widget.ecomproductslist .ecom-productslist-products {
+    float: none;
+    margin-left: 0;
+    max-width: 100%;
+}
+.widget.ecomproductslist .ecom-productslist-product {
+    margin-right: 10px;
+}
+
+
+
+
+// Migration styles
+// -----------------------------
+
+
+// Replace with corresponding template values
+@container-width: 1170px;
+@spacing__first--desktop: 40px;
+@spacing--other: 20px;
+
+
+// Applies spacing to widgets to mimic container width
+.empty-zone,
+#page-zones__main:empty,
+#page-zones__main > .widget:not(.row),
+.row:not(.widget):not(.row--width-no-padding) .row__container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  max-width: @container-width;
+}
+
+
+// Move spacing to first widget in the main zone (not sections)
+&.edit #page-zones__main-overlay + .widget:not(.row),
+#page-zones__main > .widget:not(.row):first-child {
+  padding-top: @spacing__first--desktop;
+}
+
+
+// Move spacing to last widget in the main zone (not sections)
+#page-zones__main > .widget:not(.row):last-child {
+  padding-bottom: @spacing__first--desktop;
+}
+
+
+// Add spacing to the top of a widget when it follows a section
+#page-zones__main > .row + .widget:not(.row) {
+  margin-top: @spacing--other;
+}
+
+
+// Remove spacing if widget follows a light section (change to dark if template has a dark BG)
+#page-zones__main > .row.style--light + .widget:not(.row) {
+  margin-top: 0;
+}
+
+
+// Section controls
+.row-overlay:before,
+.row-overlay:after {
+    background: none !important;
+}
+.row-overlay:before {
+    background-image: linear-gradient(to right, transparent , #e8e8e8) !important;
+}
+.row-overlay:after {
+    background-image: linear-gradient(to left, transparent , #e8e8e8) !important;
+}
+
+
+} // End of #migrated-site
