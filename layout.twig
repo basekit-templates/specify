@@ -8,8 +8,7 @@
 		{% include basekit.headScript %}
 	</head>
 
-	<body  {{ isV10sSite ? 'id="migrated-site"' : '' }}
- class="{{ page.backgroundClass }} {{ site.colorSwatch }}">
+	<body {{ isV10sSite ? 'id="migrated-site"' : '' }} class="{{ page.backgroundClass }} {{ site.colorSwatch }}">
 
 		{% block content %}
 		{% endblock %}
@@ -17,16 +16,6 @@
 			{% include "footer.twig" %}
 
 		</div>
-
-
-		<script type="text/javascript">
-			!function() {
-				function supportsSVG() {
-					return !!document.createElementNS && !! document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect
-				}
-				if (supportsSVG()) document.documentElement.className += ' svg'
-			}()
-		</script>
 
 		{% include basekit.bodyScript %}
 
