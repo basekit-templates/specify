@@ -366,6 +366,7 @@ textarea,
 	transition: border .2s;
 	background-color: @color-swatch1;
 	border-radius: 2px;
+	line-height: 1.4;
 	-webkit-appearance: none;
 	&:hover, &:focus {
 		border: 1px solid darken(@borders-blocks, 20%);
@@ -394,7 +395,8 @@ select {
 input[type=email],
 input[type=text],
 input[type=search],
-.signupform fieldset input {
+.signupform fieldset input,
+.productlist-display-form select {
 	height: 39px;
 	vertical-align: middle;
 }
